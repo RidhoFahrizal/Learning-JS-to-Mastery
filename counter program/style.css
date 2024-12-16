@@ -1,0 +1,35 @@
+
+
+#countLabel{
+    font-size: 5rem;
+    font-family: Helvetica;
+
+}
+
+.container{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.button{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    
+}
+
+.button > * {
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    background-color: rgb(112, 228, 243);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.25s;
+}
+
+.button :hover{
+    background-color:  rgb(54, 110, 117);
+}

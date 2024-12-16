@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <label for="">Username: </label>
+    <input id="yourName"><br><br>
+
+    <label for="">Your height: </label>
+    <input id="yourHeight">
+    <select id="heightUnit">
+        <option value="cm">cm</option>
+        <option value="feet">feet</option>
+    </select>
+    <label id="error-Height" style="color: red;"></label>
+    <br><br>
+
+    <label for="">Your weight: </label>
+    <input id="yourWeight">
+    <select id="weightUnit">
+        <option value="kg">kg</option>
+        <option value="pounds">pounds</option>
+    </select>
+    <label id="error-Weight" style="color: red;"></label>
+    <br><br>
+
+    <button id="submit-button">Submit</button>
+
+    <script>
+        const calculateBMI = (weight, height) => (weight / (height ** 2)).toFixed(2);
+
+        const getBMICategory = (bmi) => {
+            if (bmi < 18.5) return "Underweight";
+            if (bmi < 24.9) return "Normal weight";
+            if (bmi < 29.9) return "Overweight";
+            return "Obesity";
+        };
+
+        document.getElementById("submit-button").onclick = () => {
+            let username = document.getElementById("yourName").value;
+            let heightInput = parseFloat(document.getElementById("yourHeight").value);
+            let heightUnit = document.getElementById("heightUnit").value;
+            let weightInput = parseFloat(document.getElementById("yourWeight").value);
+            let weightUnit = document.getElementById("weightUnit").value;
+
+            document.getElementById("error-Height").innerText = "";
+            document.getElementById("error-Weight").innerText = "";
+
+            if (isNaN(heightInput)) {
+                document.getElementById("error-Height").innerText = "Input height must be a number";
+                return;
+            }
+            if (isNaN(weightInput)) {
+                document.getElementById("error-Weight").innerText = "Input weight must be a number";
+                return;
+            }
+
+            let heightInMeters = heightUnit === "cm" ? heightInput / 100 : heightInput * 0.3048;
+            let weightInKg = weightUnit === "kg" ? weightInput : weightInput * 0.453592;
+
+            let bmi = calculateBMI(weightInKg, heightInMeters);
+            let bmiCategory = getBMICategory(bmi);
+
+            document.writeln(`Hello, ${username}<br>`);
+            document.writeln(`Your height: ${heightInMeters.toFixed(2)} meters<br>`);
+            document.writeln(`Your weight: ${weightInKg.toFixed(2)} kg<br>`);
+            document.writeln(`Your BMI: ${bmi}<br>`);
+            document.writeln(`BMI Category: ${bmiCategory}<br>`);
+        };
+    </script>
+</body>
+</html>
