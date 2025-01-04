@@ -29,8 +29,8 @@
 
 class Animal{
     constructor(name,age,isMamal){
-        this.name = name;
-        this.age = age;
+        this.name    = name;
+        this.age     = age;
         this.isMamal = isMamal;
     }
     
