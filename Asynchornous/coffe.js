@@ -18,3 +18,12 @@ export function membayar (){
     console.log('Berhasil membayar');
   }, time);
 }
+
+export function pulang(){
+  const time = 10000;
+  console.log();
+  setTimeout(() => {
+    console.log('Saya sampai di depan rumah');
+    console.log('Saya sudah pulang');
+  }, time);
+}

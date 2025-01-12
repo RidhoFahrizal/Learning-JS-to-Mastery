@@ -1,4 +1,4 @@
-import { makeCoffee, membayar } from './coffe.js';
+import { makeCoffee, membayar, pulang } from './coffe.js';
 
 console.log('Saya memesan kopi di kafe.');
 
@@ -12,3 +12,5 @@ console.log('Saya mendapatkan kopi dan menghabiskannya.');
 membayar();
 console.log('totalnya 7000 rupiah kak :');
 console.log('baik sebentar ya (membuka dompet)');
+
+pulang();
