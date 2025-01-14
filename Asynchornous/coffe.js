@@ -1,5 +1,4 @@
-
-export function makeCoffee() {
+export function makeCoffee(callback) {
   const estimationTime = 5000;
 
   const inSecond = Math.ceil(estimationTime / 1000);
@@ -8,6 +7,8 @@ export function makeCoffee() {
   setTimeout(() => {
     // Do some tasks to make coffee...
     console.log('Pramusaji selesai membuat kopi.');
+
+    callback();
   }, estimationTime);
 }
 
@@ -27,3 +28,12 @@ export function pulang(){
     console.log('Saya sudah pulang');
   }, time);
 }
+
+
+
+
+
+
+
+
+
