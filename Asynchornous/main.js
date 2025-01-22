@@ -1,16 +1,30 @@
-import { makeCoffee, membayar, pulang } from './coffe.js';
+import { makeCoffee, sendCoffee } from './coffe.js';
 
-console.log('Saya memesan kopi di kafe.');
+const order = 'Kopi Espresso';
 
-makeCoffee();
+console.log(`Saya memesan ${order} di kafe.`);
 
-console.log('Pramusaji memberikan kopi pesanan.');
-console.log('Saya mendapatkan kopi dan menghabiskannya.');
+makeCoffee(order, (makeCoffeeError, makeCoffeeData) => {
+    console.log('ini adalah entitas dari makeCoffeError' + makeCoffeeError);
+    if (makeCoffeeError) {
+    // Do something with error
+    console.error(makeCoffeeError);
+    return;
+  }
+
+
+  sendCoffee(makeCoffeeData, (gagalKirimKopi, sendCoffeeData) => {
+    if (gagalKirimKopi) {
+      // Do something with error
+      console.error(gagalKirimKopi);
+      return;
+    }
+
+    console.log(`Pramusaji memberikan ${sendCoffeeData} pesanan.`);
+    console.log(`Saya mendapatkan ${sendCoffeeData} dan menghabiskannya.`);
+  });
+});
 
 
 
-membayar();
-console.log('totalnya 7000 rupiah kak :');
-console.log('baik sebentar ya (membuka dompet)');
 
-pulang();

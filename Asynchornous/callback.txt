@@ -1,0 +1,25 @@
+
+Sekarang kita akan mempelajari tetang javascript callback :
+ 
+Apa itu callback? 
+- Sebuah feture di dalam javascript yang memanfaatkan function untuk menjadi parameter 
+Bagaimana kita menggunakan Callback? 
+- kita bisa melakukannya dengan cara membuat fungsi dengan parameter callback
+    contoh: function <nama_function>(callback);
+
+Kapan kita akan menggunakan Callback ?
+- 
+Dimana kita bisa menggunakannya ? 
+
+
+
+
+
+
+
+
+
+
+
+
+
