@@ -1,7 +1,14 @@
-export { User } from "./user.js";
+import { User } from "./user.js";
 
 
-class Siswa extends User{
+
+/*
+   NOTE:  Kita akan bikin sebuah function yang akan mereturn data Siswa, Menapilkan 
+    ,Mengedit, dan Menghapus (Create);
+    
+*/
+
+export class Student extends User{
     constructor(name, id , address, nrp ){
        super(name, id, address); 
        this._nrp = nrp; 
@@ -15,4 +22,5 @@ class Siswa extends User{
         return this._nrp;
     }
     
+
 }

@@ -1,11 +1,11 @@
-import { User } from "./user.js";
+//import { User } from "./user.js";
+//import { Student  } from "./student.js";
+import { Model } from "./model.js";
 
-const siswa = [];
-const User1 = new User('ridho', '19282093409' , 'Simo Kwagean Kuburan'); 
+let siswa = [];
 
-siswa.push(1);
-console.log(siswa);
-
-
+let student = Model();
+siswa [0] = student.createStudentData('jack' , '290830928302938023', 'Simo Kwagean Kuburan no 26', '00303233');
+//console.log(siswa);
 
 
