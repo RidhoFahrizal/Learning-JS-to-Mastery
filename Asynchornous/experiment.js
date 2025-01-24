@@ -1,11 +1,15 @@
-const person = {
-    name : 'Max', 
-    age: 25,
-    greet(){
-        console.log('Hello i am' + this.name);
-    }
-};
+console.log("Mulai");
 
-const hobbies = ['Sports', 'Cooking'];
-console.log(hobbies.map(hobby => 'Hobby ' + hobby));
-//console.log(hobbies);
+Promise.resolve().then(() => {
+  setTimeout(() => {
+    console.log(`Tugas B selesai (5 detik)`);
+  },5000);
+});
+
+setTimeout(() => {
+  console.log("Tugas B selesai (2 detik)");
+}, 8000);
+
+
+
+console.log("Proses lainnya berjalan...");

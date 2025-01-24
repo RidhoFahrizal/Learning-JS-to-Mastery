@@ -1,16 +1,10 @@
-import { makeCoffee, membayar, pulang } from './coffe.js';
+import { cookingProcess, makeBurito } from './callback.js';
 
-console.log('Saya memesan kopi di kafe.');
+console.log('Saya memesan burrito di kafe.');
 
-makeCoffee();
-
-console.log('Pramusaji memberikan kopi pesanan.');
-console.log('Saya mendapatkan kopi dan menghabiskannya.');
-
-
-
-membayar();
-console.log('totalnya 7000 rupiah kak :');
-console.log('baik sebentar ya (membuka dompet)');
-
-pulang();
+makeBurito(() =>{
+    cookingProcess(() => {
+        console.log('Preman mexico memesan burrito.');
+        console.log('Preman mendapatkan burritonya.');
+    }); 
+});
