@@ -20,4 +20,5 @@ decreaseBtn.onclick = function(){
 resetBtn.onclick = function(){
      count = 0;
     countLabel.textContent = 0;
+    //ssjsj
 }
