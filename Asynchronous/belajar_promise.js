@@ -22,3 +22,14 @@ const myPromise = new Promise ((resolve , reject) =>{
         reject('Something went worng');
     }
 });
+
+
+// Contoh 
+
+
+
+setTimeout(() => {
+    console.log('test')
+    
+},2000)
+
