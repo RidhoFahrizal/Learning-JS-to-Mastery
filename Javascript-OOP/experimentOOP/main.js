@@ -4,8 +4,8 @@ import { Model } from "./model.js";
 
 let siswa = [];
 
-let student = Model();
+let student = new Model();
 siswa [0] = student.createStudentData('jack' , '290830928302938023', 'Simo Kwagean Kuburan no 26', '00303233');
-//console.log(siswa);
+console.log(siswa);
 
 
